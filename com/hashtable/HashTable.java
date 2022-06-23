@@ -11,7 +11,8 @@ public class HashTable {
 
         String string = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
         Map<String, Integer> hashTable = new Hashtable<>();               //initialising hashtable
-        String[] words = string.toLowerCase().split(" ");  //changing words to lower case and split
+        string = string.replace("avoidable", "");      //replacing
+        String[] words = string.toLowerCase().split(" ");      //changing words to lower case and split
         for (String word : words) {                                  // repeat for every single word
             Integer integer = hashTable.get(word);                   //assign integer value to the word
             if (integer == null) {                                   //integer will be initially 0 for every new word
